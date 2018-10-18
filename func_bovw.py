@@ -92,22 +92,41 @@ def sim_5(imgd, path_desc, vocab, hist_banco):
     
     return lower5
 
+# def show_sim(img1, path_desc1, vocab1, hist_banco, list_sim):
+    
+#     # list_sim = sim_5(img1, path_desc1, vocab1, hist_banco)
+
+#     imgb = cv2.imread(img1)
+#     plt.title('searched_img: {}'.format(img1))
+#     plt.axis('off')
+#     plt.imshow(cv2.cvtColor(imgb, cv2.COLOR_BGR2RGB))
+#     plt.show()
+    
+#     for img in [row[1] for row in list_sim]:
+#         plt.axis('off')
+#         plt.title('img_path: {}'.format(img))
+#         plt.imshow(cv2.cvtColor(cv2.imread(img), cv2.COLOR_BGR2RGB))
+#         plt.show()
+
 def show_sim(img1, path_desc1, vocab1, hist_banco, list_sim):
     
     # list_sim = sim_5(img1, path_desc1, vocab1, hist_banco)
-
+    plt.figure(figsize=(20,5))
+    plt.subplot(2,3,1)
     imgb = cv2.imread(img1)
-    plt.title('searched_img: {}'.format(img1))
+    plt.title('searched_img: {}'.format(img1), color='red')
     plt.axis('off')
     plt.imshow(cv2.cvtColor(imgb, cv2.COLOR_BGR2RGB))
-    plt.show()
-    
+    # plt.show()
+    i = 2
     for img in [row[1] for row in list_sim]:
+        plt.subplot(2,3,i)
         plt.axis('off')
         plt.title('img_path: {}'.format(img))
         plt.imshow(cv2.cvtColor(cv2.imread(img), cv2.COLOR_BGR2RGB))
-        plt.show()
-
+        # plt.show()
+        i += 1
+    plt.show()
 def print_sim(img1, path_desc1, vocab1, hist_banco, list_sim):
     
     # list_sim = sim_5(img1, path_desc1, vocab1, hist_banco)
