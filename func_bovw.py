@@ -50,11 +50,25 @@ def c_histograma(img,vocab):
     
     v = vocab.predict(des)
     
-    c = [1 for i in range(vocab.n_clusters)] # todos comecam com frequencia 1
+    c = np.ones(vocab.n_clusters)#[1 for i in range(vocab.n_clusters)] # todos comecam com frequencia 1
     for i in range(len(v)):
         c[int(v[i])] += 1
     
     return c
+
+def cria_contagem(pastas, vocab, max_items=10):
+    lista_caminhos = []
+    hb = []
+    for p in pastas:
+        dire = sorted(os.listdir('./101_ObjectCategories/'+ p ))[:max_items]
+        for f in dire:
+            caminho = '101_ObjectCategories/{}/{}'.format(p,f)
+            
+            h = c_histograma(caminho, vocab)
+
+            hb.append([h, caminho])
+    return hb
+        
 
 def x2_dist(hist1, hist2, vocab):
     x2 = 0
@@ -62,14 +76,14 @@ def x2_dist(hist1, hist2, vocab):
         x2 += ((hist1[i] - hist2[i])**2)/hist2[i]
     return x2
 
-def sim_5(imgd, path_desc, vocab):
+def sim_5(imgd, path_desc, vocab, hist_banco):
     c1 = c_histograma(imgd, vocab)
     
     distances = []
     i = 0
     
     for img in path_desc[0]:
-        c = c_histograma(img, vocab)
+        c = hist_banco[i]
         d = x2_dist(c1,c, vocab)
         distances.append([d,path_desc[0][i]])
         i+=1
@@ -78,9 +92,9 @@ def sim_5(imgd, path_desc, vocab):
     
     return lower5
 
-def show_sim(img1, path_desc1, vocab1):
+def show_sim(img1, path_desc1, vocab1, hist_banco, list_sim):
     
-    list_sim = sim_5(img1, path_desc1, vocab1)
+    # list_sim = sim_5(img1, path_desc1, vocab1, hist_banco)
 
     imgb = cv2.imread(img1)
     plt.title('searched_img: {}'.format(img1))
@@ -94,9 +108,9 @@ def show_sim(img1, path_desc1, vocab1):
         plt.imshow(cv2.cvtColor(cv2.imread(img), cv2.COLOR_BGR2RGB))
         plt.show()
 
-def print_sim(img1, path_desc1, vocab1):
+def print_sim(img1, path_desc1, vocab1, hist_banco, list_sim):
     
-    list_sim = sim_5(img1, path_desc1, vocab1)
+    # list_sim = sim_5(img1, path_desc1, vocab1, hist_banco)
 
     print('imagem buscada: ', img1)
     print('imagens similares: ')

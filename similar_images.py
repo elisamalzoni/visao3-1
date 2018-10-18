@@ -23,7 +23,12 @@ if argfuncsim == 'poi':
 if argfuncsim == 'bovw':
     v = pickle.load(open("vocab.p", 'rb'))
     d = pickle.load(open('path_desc.p','rb'))
+    c = pickle.load(open('count.p', 'rb'))
+    
+    hist = [row[0] for row in c]
+    # print(hist[0])
+    ls = func_bovw.sim_5(argimg, d, v, hist)
 
-    func_bovw.print_sim(argimg, d, v)
+    func_bovw.print_sim(argimg, d, v, hist, ls)
     if argshowimg == 'show':
-        func_bovw.show_sim(argimg, d, v)
+        func_bovw.show_sim(argimg, d, v, hist, ls)
