@@ -16,7 +16,27 @@ Exemplo de uso:
 
 ### Desempenho
 #### Points of Interest
+Busca de 4 imagens de categoria exixtente no banco:
 
+  - Busca 1 - carro
+![imagem poi](./imgs/poi_01.png)
+
+
+  - Busca 2 - pessoa
+![imagem poi](./imgs/poi_02.png)
+
+
+  - Busca 3 - moto lateral
+![imagem poi](./imgs/poi_03.png)
+
+
+  - Busca 3 - bicicleta
+![imagem poi](./imgs/poi_03.png)
+
+Busca de imagem de categoria diferente das do banco:
+
+  - acordeão
+![imagem poi](./imgs/poi_04.png)
 
 
 #### Bag of Visual Words
