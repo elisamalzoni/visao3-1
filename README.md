@@ -2,7 +2,7 @@
 ## Elisa Malzoni
 
 ### Executando o programa
-Para criar o vocabulário, rode `create_vocab.py`, que guarda a contagem e o vocabulário em arquivos. Não será necessario, já que os arquivos então neste repositório.
+Para criar o vocabulário, rode `create_vocab.py`, que guarda a contagem e o vocabulário em arquivos. Não será necessário, já que os arquivos então neste repositório.
 
 Para rodar o programa:
 
