@@ -30,7 +30,7 @@ Busca de 4 imagens de categoria exixtente no banco:
 ![imagem poi](./imgs/poi_03.png)
 
 
-  - Busca 3 - bicicleta
+  - Busca 4 - bicicleta
 ![imagem poi](./imgs/poi_04.png)
 
 Busca de imagem de categoria diferente das do banco:
