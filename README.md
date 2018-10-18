@@ -31,12 +31,12 @@ Busca de 4 imagens de categoria exixtente no banco:
 
 
   - Busca 3 - bicicleta
-![imagem poi](./imgs/poi_03.png)
+![imagem poi](./imgs/poi_04.png)
 
 Busca de imagem de categoria diferente das do banco:
 
-  - acordeão
-![imagem poi](./imgs/poi_04.png)
+  - ornintorrinco
+![imagem poi](./imgs/poi_05.png)
 
 
 #### Bag of Visual Words
