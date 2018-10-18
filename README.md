@@ -17,10 +17,11 @@ Exemplo de uso:
 ### Desempenho
 #### Points of Interest
 
-imagem buscada:  ./101_ObjectCategories/platypus/image_0030.jpg
-imagens similares: 
--  ./VOC2005_1/PNGImages/TUGraz_bike/bike_313.png
--  ./VOC2005_1/PNGImages/Caltech_motorbikes_side/0090.png
--  ./VOC2005_1/PNGImages/TUGraz_person/person_186.png
 
+|Imagem Buscada                  |./101_ObjectCategories/platypus/image_0030.jpg        |
+|--------------------------------|------------------------------------------------------|
+|Imagem com maior similaridade   |./VOC2005_1/PNGImages/TUGraz_bike/bike_313.png        |
+|Imagem com 2a maior similaridade|./VOC2005_1/PNGImages/Caltech_motorbikes_side/0090.png|
+|Imagem com 3a maior similaridade|./VOC2005_1/PNGImages/TUGraz_person/person_186.png    |
 
+#### Bag of Visual Words
