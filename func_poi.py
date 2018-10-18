@@ -80,7 +80,7 @@ def sim_3(im1, pastas, max_items=5):
 
 def show_sim(img1, list_sim):
     
-    plt.figure(figsize = (10,10))
+    plt.figure(figsize = (9,7))
     plt.subplot(2,2,1)
     imgb = cv2.imread(img1)
     plt.title('searched_img: {}'.format(img1), color='red')
@@ -95,20 +95,6 @@ def show_sim(img1, list_sim):
         plt.imshow(cv2.cvtColor(cv2.imread(img), cv2.COLOR_BGR2RGB))
         i += 1
     plt.show()
-
-# def show_sim(img1, list_sim):
-    
-#     imgb = cv2.imread(img1)
-#     plt.title('searched_img: {}'.format(img1))
-#     plt.axis('off')
-#     plt.imshow(cv2.cvtColor(imgb, cv2.COLOR_BGR2RGB))
-#     plt.show()
-    
-#     for img in [row[1] for row in list_sim]:
-#         plt.axis('off')
-#         plt.title('img_path: {}'.format(img))
-#         plt.imshow(cv2.cvtColor(cv2.imread(img), cv2.COLOR_BGR2RGB))
-#         plt.show()
 
 
 def print_sim(img1, list_sim):
