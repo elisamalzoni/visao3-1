@@ -18,10 +18,23 @@ Exemplo de uso:
 #### Points of Interest
 
 
-|Imagem Buscada                  |./101_ObjectCategories/platypus/image_0030.jpg        |
-|--------------------------------|------------------------------------------------------|
-|Imagem com maior similaridade   |./VOC2005_1/PNGImages/TUGraz_bike/bike_313.png        |
-|Imagem com 2a maior similaridade|./VOC2005_1/PNGImages/Caltech_motorbikes_side/0090.png|
-|Imagem com 3a maior similaridade|./VOC2005_1/PNGImages/TUGraz_person/person_186.png    |
 
 #### Bag of Visual Words
+Busca de 3 imagens de categoria exixtente no banco:
+
+  - Busca 1 - ornintorrinco
+![imagem bovw](./imgs/bovw_01.png)
+
+
+  - Busca 2 - pessoa
+![imagem bovw](./imgs/bovw_02.png)
+
+
+  - Busca 3 - elefante
+![imagem bovw](./imgs/bovw_03.png)
+
+
+Busca de imagem de categoria diferente das do banco:
+
+  - acordeão
+![imagem bovw](./imgs/bovw_04.png)
