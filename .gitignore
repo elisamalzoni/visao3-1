@@ -1,2 +1,4 @@
 101_ObjectCategories/
 VOC2005_1/
+__pycache__/
+.vscode/

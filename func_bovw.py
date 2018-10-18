@@ -127,6 +127,7 @@ def show_sim(img1, path_desc1, vocab1, hist_banco, list_sim):
         # plt.show()
         i += 1
     plt.show()
+    
 def print_sim(img1, path_desc1, vocab1, hist_banco, list_sim):
     
     # list_sim = sim_5(img1, path_desc1, vocab1, hist_banco)

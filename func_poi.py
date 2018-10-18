@@ -77,37 +77,39 @@ def sim_3(im1, pastas, max_items=5):
 
     return higher31
 
-# def sim_3(img, pastas, d1, desc, max_items=5):
-#     d = d1
-#     sim1 = []
-#     i = 0
-#     for p in pastas:
-#         dire = (os.listdir('./VOC2005_1/PNGImages/'+ p ))[:max_items]
-#         for f in dire:
-#             caminho = './VOC2005_1/PNGImages/{}/{}'.format(p,f)
-            
-#             simi1 = similarity_proportion_matches(img, desc[i], d1)
-            
-#             sim1.append([simi1, caminho])
-#             i += 1
-
-#     higher31 = sorted(sim1, key=lambda x:x[0], reverse=True)[:3]
-
-#     return higher31
 
 def show_sim(img1, list_sim):
     
+    plt.figure(figsize = (10,10))
+    plt.subplot(2,2,1)
     imgb = cv2.imread(img1)
-    plt.title('searched_img: {}'.format(img1))
+    plt.title('searched_img: {}'.format(img1), color='red')
     plt.axis('off')
     plt.imshow(cv2.cvtColor(imgb, cv2.COLOR_BGR2RGB))
-    plt.show()
-    
+    # plt.show()
+    i = 2
     for img in [row[1] for row in list_sim]:
+        plt.subplot(2,2,i)
         plt.axis('off')
         plt.title('img_path: {}'.format(img))
         plt.imshow(cv2.cvtColor(cv2.imread(img), cv2.COLOR_BGR2RGB))
-        plt.show()
+        i += 1
+    plt.show()
+
+# def show_sim(img1, list_sim):
+    
+#     imgb = cv2.imread(img1)
+#     plt.title('searched_img: {}'.format(img1))
+#     plt.axis('off')
+#     plt.imshow(cv2.cvtColor(imgb, cv2.COLOR_BGR2RGB))
+#     plt.show()
+    
+#     for img in [row[1] for row in list_sim]:
+#         plt.axis('off')
+#         plt.title('img_path: {}'.format(img))
+#         plt.imshow(cv2.cvtColor(cv2.imread(img), cv2.COLOR_BGR2RGB))
+#         plt.show()
+
 
 def print_sim(img1, list_sim):
     print('imagem buscada: ', img1)
